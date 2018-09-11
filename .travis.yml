@@ -1,9 +1,11 @@
 language: ruby
 rvm:
 - 2.2
+
 deploy:
   provider: heroku
-  api_key: 59b5272f-6ebf-4b24-8212-7fa02bce2a17
+  api_key: 734824a9-73dd-4f00-be34-fb8abb7b4c2f
   app: ProjetPizza
   on:
+    all_branches: true
     repo: Tilanchicha/ProjetPizza
