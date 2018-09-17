@@ -1,11 +1,10 @@
 language: ruby
 rvm:
-- 2.2
-
+- 2.4.4
 deploy:
   provider: heroku
-  api_key: 734824a9-73dd-4f00-be34-fb8abb7b4c2f
+  api_key:
+    secure: lVPK0XmsL6YCiStC2SydHRp2rsn29uACeFXA8nODJsMJigaCvXV2PPylpxd8K194j7xzwZsCPy2Dt5zsHhDXj5FChtaFQ/YFsG5NqXRhkkS4hPsWaQ+YkxrdyI31K6PZu5GD7B/7B+XEXnhBu7kAW6SMyiBhexYO2xElJBCvGP8/7Hsb5tmeR+nrnXcoR5VBLvnrXfBNXFy/1oMaxBT37Wy80ZePgHXN5syzq/2FbWRmfBzwJxKXZlOrxVuzTMykcjSIWlLXbm4UOPkSdFShQ8IjnLFZDxuxQE1larqfEUuj2KpGKEF95OUBj2huwEfbP3vMWlJBbSpFF2IOR+Pe21/oroBTjIFIDSmeio6WGdb89rIH0BGhPCyj0bZfDNPjU4eepgumKbObw0T7iOxt/6G8sdKGmbiPxFdx5FVk6kUQITlEWchc5d6bOryqOKbIb4gi2rR7cO43LvvixFidQo+ewfCf4MsKzf7MKCoZZmaic0jpX4VATBCRHbE4r2n8WN9wRPvLvotXYPRZc3u8fYYhx6IbUJl/DW6Hgb8W5QpYVdv/gxnL17ImHbaf3YG7uB9nEVzr12oE4OazIjIlNYqZ+lp6D0C08suMD7nXWlqTdvT8+nAlxNkNlBlqqxDM6uXnigY3qqMqcW4PBo8gizCjRRC3buoCoqI0cEJ41eo=
   app: ProjetPizza
   on:
-    all_branches: true
     repo: Tilanchicha/ProjetPizza
