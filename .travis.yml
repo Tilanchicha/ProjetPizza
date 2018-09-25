@@ -9,3 +9,16 @@ deploy:
   app: projetpizza
   on:
     repo: Tilanchicha/ProjetPizza
+    
+    
+    
+env:
+  global:
+    - CC_TEST_REPORTER_ID=e38079fb3a4345f1cc0871a6727d31b29f30e5180c58e96296a12920afd47189
+language: ruby
+rvm:
+  - 2.2.0
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
