@@ -2,6 +2,7 @@ language: ruby
 rvm:
 - 2.4.4
 deploy:
+  run: "rails db:migrate"
   provider: heroku
   api_key:
     secure: wtSe2G6pL0f0vBNpiqHzkD/iw9I1Rt8rsrr/Ky5xbJHZjcKzUdWATkCz4cAySWAscCa3c8LFpgRuYRMY5iN40CSaWC6+GEFzmGM0QueB79KMPYTZJ/5ewUvJJR58dr6K4nMw+CxcJXHGyphQNitT8EJUCL7LUe1aEMvXLPaVXu1DEa8ZTCGwfhdpVYsA+Jedzp4CW7ap9HYEOmCfWB9WR75+2XELVBpMLixoKTqxoK0aOZNrYxJgkKWas1P6sWS/bxYsLrX9j/GGqtXBuedSS0GPfz/cD7ktXeY1MJeqVRrn7375Bd8Sfe59VDiR+HwvFLZfAa2k38zUsy3Edd+S6dYJXz0f/SLJiMwKQMt7muBJ1ctu0kpZ0dqhPs9W3O96IZCQJgiBdP9sx75BXtd930mS7jkhQ2t7dPrKmXTXfabxxtLvVSs3tCCOhOY6hbAvtSnUKBlo4VIO4bev+nBxsc8DcOChWGAeCxQupycCnWbjXY5HGL0+xvEYl3ZJpUJl/9Pp0afUEMkQoiSiWct5t7QDPDb2r2B0znCpmYdV2jfq6JKus4FvSdtB/OVmpGSdhazYoWyLhonkGiTk7vZ3/Z2pedSY0j8N8CnGSV/qO+Efq+NMygddpo/GvQSC8abwkxnv+S/1nftAyuRObQZvRI4j1Bjol/l53pSplT+hfwA=
