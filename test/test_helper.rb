@@ -7,9 +7,10 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+require 'simplecov'
+SimpleCov.start 
 end
 
-require 'simplecov'
-SimpleCov.start
+
 
 # Previous content of test helper now starts here
