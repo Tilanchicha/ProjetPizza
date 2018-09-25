@@ -14,7 +14,6 @@ class PizzasTest < ApplicationSystemTestCase
     visit pizzas_url
     click_on "New Pizza"
 
-    fill_in "", with: @pizza.
     fill_in "Name", with: @pizza.name
     fill_in "Price", with: @pizza.price
     fill_in "Url", with: @pizza.url
@@ -28,7 +27,6 @@ class PizzasTest < ApplicationSystemTestCase
     visit pizzas_url
     click_on "Edit", match: :first
 
-    fill_in "", with: @pizza.
     fill_in "Name", with: @pizza.name
     fill_in "Price", with: @pizza.price
     fill_in "Url", with: @pizza.url
