@@ -1,0 +1,24 @@
+<p>Commandes</p>
+
+<table align=center border=1 >
+  <tr align-text=center > 
+	<th>Name
+	<th>Adress
+	<th> Pizza
+  </tr>
+  
+  <% @orders.each do |order| %>
+  <tr>
+    <td> <%= order[:order][:name]  %></td>
+    <td> <%= order[:order][:adress] %></td>
+    <td>
+        <ul >
+		        <% order[:pizzas].each do |pizza| %>
+              <li><%= pizza[:name] %></li>
+            <% end %>
+        </ul>
+    </td>
+  </tr>
+  <% end %>
+</table>
+<br>
