@@ -23,8 +23,8 @@ end
     @allOrders = Order.all
     @allOrders.each do |order|
       pizzas = []
-      @orderlines=Orderline.where(order: order)
-      @orderlines.each do |orderline|
+      @order_lines=Orderline.where(order: order)
+      @order_lines.each do |orderline|
           pizza = Pizza.find(orderline[:pizza_id])
           pizzas.push(pizza)
       end
