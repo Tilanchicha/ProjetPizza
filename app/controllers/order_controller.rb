@@ -3,9 +3,9 @@ class OrderController < ApplicationController
   
 def create 
     @name = params[:name]
-    @adress = params[:adresse]
+    @adresse = params[:adresse]
     @pizzas = params[:pizzas]
-    newOrder = Order.new(:name => @name, :adresse => @adress)
+    newOrder = Order.new(:name => @name, :adresse => @adresse)
     newOrder.save
     @pizzas.each do |pizza|
       @orderPizza =Pizza.where(name: pizza).first
