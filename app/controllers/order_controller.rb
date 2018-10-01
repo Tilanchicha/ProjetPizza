@@ -9,10 +9,10 @@ def create
     newOrder.save
     @pizzas.each do |pizza|
       @orderPizza =Pizza.where(name: pizza).first
-      newOrderline = Order_line.new
-      newOrderline.order=newOrder
-      newOrderline.pizza=@orderPizza
-      newOrderline.save
+      newOrder_line = Order_line.new
+      newOrder_line.order=newOrder
+      newOrder_line.pizza=@orderPizza
+      newOrder_line.save
     end
    
      render json: {"message :" => "Order created"}
