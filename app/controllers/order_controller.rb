@@ -9,7 +9,7 @@ def create
     newOrder.save
     @pizzas.each do |pizza|
       @orderPizza =Pizza.where(name: pizza).first
-      newOrder_line = Order_line.new
+      newOrder_line = Orderline.new
       newOrder_line.order=newOrder
       newOrder_line.pizza=@orderPizza
       newOrder_line.save
