@@ -9,7 +9,7 @@ def create
     newOrder.save
     @pizzas.each do |pizza|
       @orderPizza =Pizza.where(name: pizza).first
-      newOrder_line = Orderline.new
+      newOrder_line = Order_line.new
       newOrder_line.order=newOrder
       newOrder_line.pizza=@orderPizza
       newOrder_line.save
@@ -23,9 +23,9 @@ end
     @allOrders = Order.all
     @allOrders.each do |order|
       pizzas = []
-      @order_lines=Orderline.where(order: order)
-      @order_lines.each do |orderline|
-          pizza = Pizza.find(orderline[:pizza_id])
+      @order_lines=Order_line.where(order: order)
+      @order_lines.each do |order_line|
+          pizza = Pizza.find(order_line[:pizza_id])
           pizzas.push(pizza)
       end
       @orders.push({order: order ,pizzas: pizzas})
