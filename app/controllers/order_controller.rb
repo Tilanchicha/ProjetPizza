@@ -17,11 +17,7 @@ end
     @allOrders = Order.all
     @allOrders.each do |order|
       pizzas = []
-      @order_lines=Order_line.where(order: order)
-      @order_lines.each do |order_line|
-          pizza = Pizza.find(orderline[:pizza_id])
-          pizzas.push(pizza)
-      end
+
       @orders.push({order: order ,pizzas: pizzas})
     end
 end
