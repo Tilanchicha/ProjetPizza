@@ -7,7 +7,13 @@ def create
     @pizzas = params[:pizzas]
     newOrder = Order.new(:name => @name, :adresse => @adresse)
     newOrder.save
-
+    @pizzas.each do |pizza|
+      @orderPizza =Pizza.where(name: pizza).first
+      newOrder_line = Orderline.new
+      newOrder_line.order=newOrder
+      newOrder_line.pizza=@orderPizza
+      newOrder_line.save
+    end
    
      render json: {"message :" => "Order created"}
 end
