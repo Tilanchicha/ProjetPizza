@@ -1,3 +1,3 @@
 class Pizza < ApplicationRecord
-    has_many :order, through: :
+    has_many :orders, through: :order_lines
 end
